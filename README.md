@@ -1,90 +1,86 @@
-# Generating Monthly Paleostreamflow Reconstructions
+# Weber Basin Drought Study
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1029739.svg)](https://doi.org/10.5281/zenodo.1029739)
-
-This repository contains code designed to disaggregate and reconstruct monthly streamflows directly from annual streamflow reconstructions, reconstructions of global circulation, and potential differences among regional tree-ring chronologies related to tree species and geographic location. It is presented here to replicate the results in [Stagge et al. (2017)](http://) and to provide a reference for others wishing to use these methods to reconstruct streamflow records.  
-
-An subset of the reconstruction is shown below as an example. Users can interact with the entire reconstruction at the [Monthly Paleostreamflow Explorer](https://jstagge.shinyapps.io/paleo_flow)
-
-<figure>
- <img src="reconst_example.png" alt="Monthly reconstruction example" />
- <figcaption>
- Reconstructed flows at the Logan river site for subsets of the (a) historical and (b) observed periods. Reproduces from Stagge et al. (2017).
- </figcaption>
-</figure>
+Code associated with paper, entitled, '??????'. One Paragraph of project description goes here
 
 ## Getting Started
 
-These instructions will allow you to fit monthly streamflow reconstruction models on your local machine for testing purposes. All code is written in R. See Prerequisites and Running sections below for detailed instructions.
+How to clone repository, download data
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-In order to run this code, you must install:
-* [R for Statistical Computing](https://www.r-project.org/)
-
-All necesary R packages will be installed automatically in the first file.
-
-## Running the Code
-
-### Running all scripts at once
-
-Code is numbered in order of operations.  If you would like to simply recreate the results of [Stagge et al. (2017)](http://), you may run the following from any command line after installing R. For more detailed information about each file, see below:
+What things you need to install the software and how to install them
 
 ```
-Rscript 00_prepare_file_system.R
-Rscript 01_process_streamflows.R
-Rscript 02_mf_model.R
-Rscript 03_pca_tree_ring.R
-Rscript 04_ap_apr_model.R
-Rscript 05_plot_ap_apr_model.R
-Rscript 06_gof.R
+Give examples
 ```
 
-### Running scripts step-by-step
-The following file prepares the file system, installing any necesary packages and creating folders for model output.
+### Installing
+
+A step by step series of examples that tell you have to get a development env running
+
+Say what the step will be
 
 ```
-Rscript 00_prepare_file_system.R
-```
-The next script downloads and processes USGS streamflow for the relevant sites. In this case, the relevant stream gauges are 10109001 and 10011500, located on the Logan and Bear rivers of Utah, respectively.
-```
-Rscript 01_process_streamflows.R
-```
-The following script fits the Monthly Fraction (MF) model described in [Stagge et al. (2017)](http://) and then reconstructs flow.
-```
-Rscript 02_mf_model.R
-```
-The following file runs a PCA analysis on regional tree-ring chronologies to be used as a predictor in the APR model.
-```
-Rscript 03_pca_tree_ring.R
+Give the example
 ```
 
-These two scripts first fit and reconstruct flows using the Annual Percentile (AP) and Annual Percentile with Regression (APR) models, followed by code to plot the resulting model regression coefficients.
-```
-Rscript 04_ap_apr_model.R
-Rscript 05_plot_ap_apr_model.R
-```
+And repeat
 
-Finally, a series of goodness of fit tests are run, in addition to several plots used to validate the model results:
 ```
-Rscript 06_gof.R
+until finished
 ```
 
-## Reference and How to Cite
+End with an example of getting some data out of the system or using it for a little demo
 
-For any description of this methodology, please use the following citation (s):
+## Running the tests
 
-* Stagge, J.H., Rosenberg, D.E., DeRose, R.J., and Rittenour, T.M. (2017) "Monthly paleostream-flow reconstruction from annual tree-ring chronologies." Journal of Hydrology.
+Can run each piece of code separately.
 
-* Stagge, J.H. (2017) "monthly_paleo: Code repository accompanying Stagge et al. (2017)." doi: 10.5281/zenodo.889892.
+Or can use the Run_code.txt file to process all at once.
 
-To refer to the PaleoAPR R package used in this study, please use the following citation:
+Explain how to run the automated tests for this system
 
-* Stagge, J.H. (2017) "paleoAPR: Monthly streamflow reconstruction package for R." R package version 1.0. doi: 10.5281/zenodo.1029739.
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **James H. Stagge** - *Owner* - [jstagge](https://github.com/jstagge)
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
@@ -92,7 +88,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Thank you to Justin DeRose for providing several tree-ring chronologies.
-* Additional thanks to the International Tree-Ring Data Bank for providing further chronologies and global climate reconstructions. 
-
-[![Analytics](https://ga-beacon.appspot.com/UA-93682740-1/monthly_paleo/README)](https://github.com/igrigorik/ga-beacon)
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc
