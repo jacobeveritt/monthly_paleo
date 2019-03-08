@@ -60,6 +60,10 @@ dir.create(write_output_base_path)
 ###  Load functions
 ###########################################################################
 ### Load these functions for all code
+
+##installation 
+#devtools::install_github("jalvesaq/colorout")
+
 require(colorspace) ##colorout replaced with colorspace
 require(assertthat)
 require(staggefuncs)
@@ -73,6 +77,7 @@ require(ade4)
 library(dendextend)
 require(ggsci)
 require(tidyverse)
+require(dendextend)
 
 ### Load project specific functions
 file.sources = list.files(function_path, pattern="*.R", recursive=TRUE)
